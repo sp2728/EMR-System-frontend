@@ -39,4 +39,7 @@ export class SignupComponent implements OnInit {
     if(control.errors.email) return 'Enter a valid email address';
   }
 
+  onSubmit(){
+    console.log(this.registerForm.value);
+  }
 }
