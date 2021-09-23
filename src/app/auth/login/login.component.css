@@ -1,0 +1,15 @@
+.container-fluid{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: bisque;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+mat-card{
+    min-width: 300px;
+}

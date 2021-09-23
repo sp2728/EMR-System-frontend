@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>EMR System Login</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <mat-form-field>
+                    <mat-label>Email</mat-label>
+                    <input matInput type="email" formControlName="email">
+                    <mat-error *ngIf="loginForm.controls.email.invalid"> {{getErrorMessage(loginForm.controls.email)}}</mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Password</mat-label>
+                    <input matInput type="password" formControlName="password">
+                    <mat-error *ngIf="loginForm.controls.password.invalid"> {{getErrorMessage(loginForm.controls.password)}}</mat-error>
+                </mat-form-field>
+                <button mat-button type="submit"> Login </button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
